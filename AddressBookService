@@ -1,0 +1,35 @@
+//UC1 Creating database as AddessBookService
+
+mysql>create database AddressBookService;
+Query OK, 1 row affected (0.32 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| addressbookservice |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.05 sec)
+mysql> create database AddressBookService;
+Query OK, 1 row affected (0.32 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| addressbookservice |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.05 sec)
+
+
+mysql> use addressbookservice;
+Database changed
+-------------------------------------------------------------------------------------------------------
