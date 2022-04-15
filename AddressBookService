@@ -207,3 +207,30 @@ mysql> select count(firstname) from Addressbook where contacttype='friend';
 |                1 |
 +------------------+
 1 row in set (0.00 sec)
+//UC11 ability to add person to friend and family
+mysql> select * from Addressbook;
++-----------+----------+----------+-----------+---------------+----------+-------------+-----------------------+------------+-------------+
+| firstname | lastname | address  | city      | state         | zip      | phonenumber | email                 | bookname   | contacttype |
++-----------+----------+----------+-----------+---------------+----------+-------------+-----------------------+------------+-------------+
+| bharat    | jain     | bkguda   | vizag     | andhrapradesh |  5073438 |  9176347439 | bharat@gmail.com      | helloworld | friend      |
+| chandu    | savla    | lonavala | pune      | maharashtra   |  5043438 | 91763456439 | chandu@gmail.com      |            |             |
+| deepak    | kalal    | abcd     | bangalore | karnataka     | 50443438 | 91763646439 | deepak@gmail.com      |            |             |
++-----------+----------+----------+-----------+---------------+----------+-------------+-----------------------+------------+-------------+
+3 rows in set (0.00 sec)
+mysql> update Addressbook set bookname ='helloworld',contacttype='family' where lastname='savla';
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Addressbook set bookname ='helloworld',contacttype='family' where lastname='kalal';
+Query OK, 1 row affected (0.06 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Addressbook;
++-----------+------------+----------+-----------+---------------+----------+-------------+-----------------------+------------+-------------+
+| firstname | lastname   | address  | city      | state         | zip      | phonenumber | email                 | bookname   | contacttype |
++-----------+------------+----------+-----------+---------------+----------+-------------+-----------------------+------------+-------------+
+| bharat    | jain       | bkguda   | vizag     | andhrapradesh |  5073438 |  9176347439 | bharat@gmail.com      | helloworld | friend      |
+| chandu    | savla      | lonavala | pune      | maharashtra   |  5043438 | 91763456439 | chandu@gmail.com      | helloworld | family      |
+| deepak    | kalal      | abcd     | bangalore | karnataka     | 50443438 | 91763646439 | deepak@gmail.com      | helloworld | family      |
++-----------+------------+----------+-----------+---------------+----------+-------------+-----------------------+------------+-------------+
+3 rows in set (0.00 sec)
