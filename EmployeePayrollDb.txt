@@ -19,7 +19,7 @@ mysql> show databases;
 +--------------------+
 5 rows in set (0.05 sec)
 
-mysql> create database EmployeePayroll;;
+mysql> create database EmployeePayroll;
 Query OK, 1 row affected (0.32 sec)
 mysql> show databases;
 +--------------------+
@@ -254,22 +254,6 @@ mysql> SELECT gender, MAX(salary) FROM employee_payroll GROUP BY gender;
 | F      |     3000000 |
 +--------+-------------+
 2 rows in set (0.00 sec)
-
-mysql> SHOW DATABASES;
-+---------------------+
-| Database            |
-+---------------------+
-| address_book_system |
-| information_schema  |
-| mysql               |
-| payroll_service     |
-| performance_schema  |
-| sys                 |
-+---------------------+
-6 rows in set (0.04 sec)
-
-mysql> use payroll_service;
-Database changed
 
 mysql> Desc employee_payroll;
 +--------+--------------+------+-----+---------+----------------+
