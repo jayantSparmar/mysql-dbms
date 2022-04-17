@@ -14,21 +14,6 @@ mysql> show databases;
 | sys                |
 +--------------------+
 5 rows in set (0.05 sec)
-mysql> create database AddressBookService;
-Query OK, 1 row affected (0.32 sec)
-
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| addressbookservice |
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-+--------------------+
-5 rows in set (0.05 sec)
-
 
 mysql> use addressbookservice;
 Database changed
@@ -129,7 +114,7 @@ mysql> select * from Addressbook where city='nandre' or state='karnataka';
 --------------------------------------------------------------------------------------------------------
 // UC7 size of addressbook by city and state
 
- select count(firstname) from Addressbook where city='nandre';
+mysql> select count(firstname) from Addressbook where city='nandre';
 +------------------+
 | count(firstname) |
 +------------------+
@@ -150,9 +135,9 @@ mysql> select firstname,city from Addressbook order by city;
 +-----------+-----------+
 | firstname | city      |
 +-----------+-----------+
-| mall      | bangalore |
-| mujawar   | nandre    |
-| chow      | pune      |
+| deepak    | bangalore |
+| abhishek  | nandre    |
+| chandu    | pune      |
 +-----------+-----------+
 3 rows in set (0.00 sec)
 ------------------------------------------------------------------------------------------------------
